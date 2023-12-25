@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Routes, RouterModule } from '@angular/router';
+import { MercadoPagoService } from '../../../dist/mercado-pago/public-api';
 @Component({
   selector: 'app-courses-list',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, MercadoPagoService],
   templateUrl: './courses-list.component.html',
   styleUrl: './courses-list.component.css'
 })

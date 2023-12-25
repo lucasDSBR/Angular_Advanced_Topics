@@ -90,6 +90,39 @@
           }
         }
       }
+    },
+    "mercado-pago": {
+      "projectType": "library",
+      "root": "projects/mercado-pago",
+      "sourceRoot": "projects/mercado-pago/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/mercado-pago/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/mercado-pago/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/mercado-pago/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "tsConfig": "projects/mercado-pago/tsconfig.spec.json",
+            "polyfills": [
+              "zone.js",
+              "zone.js/testing"
+            ]
+          }
+        }
+      }
     }
   }
 }
